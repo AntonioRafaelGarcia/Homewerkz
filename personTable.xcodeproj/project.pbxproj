@@ -13,6 +13,12 @@
 		B7102EF51BBB782A0065D109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7102EF41BBB782A0065D109 /* Assets.xcassets */; };
 		B7102EF81BBB782A0065D109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7102EF61BBB782A0065D109 /* LaunchScreen.storyboard */; };
 		B7102F001BBC8EDF0065D109 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7102EFF1BBC8EDF0065D109 /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		B733AEAA1BC22A0C00C26CC9 /* adnaSeta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA51BC22A0C00C26CC9 /* adnaSeta.jpg */; settings = {ASSET_TAGS = (); }; };
+		B733AEAB1BC22A0C00C26CC9 /* antonioGarcia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA61BC22A0C00C26CC9 /* antonioGarcia.jpg */; settings = {ASSET_TAGS = (); }; };
+		B733AEAC1BC22A0C00C26CC9 /* emilyRatajkowski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA71BC22A0C00C26CC9 /* emilyRatajkowski.jpg */; settings = {ASSET_TAGS = (); }; };
+		B733AEAD1BC22A0C00C26CC9 /* gigiHadid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA81BC22A0C00C26CC9 /* gigiHadid.jpg */; settings = {ASSET_TAGS = (); }; };
+		B733AEAE1BC22A0C00C26CC9 /* salmaHayek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA91BC22A0C00C26CC9 /* salmaHayek.jpg */; settings = {ASSET_TAGS = (); }; };
+		B7B546531BBFA4EF00EF3F86 /* Who Dat View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B546521BBFA4EF00EF3F86 /* Who Dat View Controller.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		B7102EF71BBB782A0065D109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7102EF91BBB782A0065D109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7102EFF1BBC8EDF0065D109 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B733AEA51BC22A0C00C26CC9 /* adnaSeta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adnaSeta.jpg; sourceTree = "<group>"; };
+		B733AEA61BC22A0C00C26CC9 /* antonioGarcia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antonioGarcia.jpg; sourceTree = "<group>"; };
+		B733AEA71BC22A0C00C26CC9 /* emilyRatajkowski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emilyRatajkowski.jpg; sourceTree = "<group>"; };
+		B733AEA81BC22A0C00C26CC9 /* gigiHadid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gigiHadid.jpg; sourceTree = "<group>"; };
+		B733AEA91BC22A0C00C26CC9 /* salmaHayek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salmaHayek.jpg; sourceTree = "<group>"; };
+		B7B546521BBFA4EF00EF3F86 /* Who Dat View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Who Dat View Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B702C5A41BC1C338000046FB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B733AEA51BC22A0C00C26CC9 /* adnaSeta.jpg */,
+				B733AEA61BC22A0C00C26CC9 /* antonioGarcia.jpg */,
+				B733AEA71BC22A0C00C26CC9 /* emilyRatajkowski.jpg */,
+				B733AEA81BC22A0C00C26CC9 /* gigiHadid.jpg */,
+				B733AEA91BC22A0C00C26CC9 /* salmaHayek.jpg */,
+				B7102EF41BBB782A0065D109 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		B7102EE11BBB782A0065D109 = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +85,8 @@
 				B7102EEF1BBB782A0065D109 /* ViewController.swift */,
 				B7102EFF1BBC8EDF0065D109 /* Person.swift */,
 				B7102EF11BBB782A0065D109 /* Main.storyboard */,
-				B7102EF41BBB782A0065D109 /* Assets.xcassets */,
+				B7B546521BBFA4EF00EF3F86 /* Who Dat View Controller.swift */,
+				B702C5A41BC1C338000046FB /* Assets */,
 				B7102EF61BBB782A0065D109 /* LaunchScreen.storyboard */,
 				B7102EF91BBB782A0065D109 /* Info.plist */,
 			);
@@ -124,7 +150,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B733AEAA1BC22A0C00C26CC9 /* adnaSeta.jpg in Resources */,
+				B733AEAD1BC22A0C00C26CC9 /* gigiHadid.jpg in Resources */,
+				B733AEAB1BC22A0C00C26CC9 /* antonioGarcia.jpg in Resources */,
 				B7102EF81BBB782A0065D109 /* LaunchScreen.storyboard in Resources */,
+				B733AEAC1BC22A0C00C26CC9 /* emilyRatajkowski.jpg in Resources */,
+				B733AEAE1BC22A0C00C26CC9 /* salmaHayek.jpg in Resources */,
 				B7102EF51BBB782A0065D109 /* Assets.xcassets in Resources */,
 				B7102EF31BBB782A0065D109 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +170,7 @@
 			files = (
 				B7102F001BBC8EDF0065D109 /* Person.swift in Sources */,
 				B7102EF01BBB782A0065D109 /* ViewController.swift in Sources */,
+				B7B546531BBFA4EF00EF3F86 /* Who Dat View Controller.swift in Sources */,
 				B7102EEE1BBB782A0065D109 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +319,7 @@
 				B7102EFE1BBB782A0065D109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "189F614B14DC522B4BA86FB52A8B5D11FE298C7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "630A120F23D3AC08B634068CBFA9161D6AE31630" : 0,
+    "189F614B14DC522B4BA86FB52A8B5D11FE298C7C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "52FFE08D-64E9-4AA4-BA22-2AF32436C851",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "630A120F23D3AC08B634068CBFA9161D6AE31630" : "",
+    "189F614B14DC522B4BA86FB52A8B5D11FE298C7C" : "personTable\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "personTable",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "personTable.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AntonioRafaelGarcia\/halfwayPointHomework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "189F614B14DC522B4BA86FB52A8B5D11FE298C7C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AntonioRafaelGarcia\/Homewerkz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "630A120F23D3AC08B634068CBFA9161D6AE31630"
+    }
+  ]
+}

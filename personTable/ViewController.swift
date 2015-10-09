@@ -14,27 +14,27 @@ class ViewController: UIViewController, UITableViewDataSource {
     super.viewDidLoad()
     tableView.dataSource = self
     if let image = image0 {
-      let person0 = Person(fName: "Antonio", lName: "Garcia", facePic: image, yeaOrNay: true)
+      let person0 = Person(fName: "Antonio", lName: "Garcia", facePic: image, yeaOrNay: true, att1: "", att2: "")
       people.append(person0)
     }
     
     if let image = image1 {
-      let person1 = Person(fName: "Gigi", lName: "Hadid", facePic: image, yeaOrNay: false)
+      let person1 = Person(fName: "Gigi", lName: "Hadid", facePic: image, yeaOrNay: false, att1: "", att2: "")
       people.append(person1)
     }
     
     if let image = image2 {
-      let person2 = Person(fName: "Salma", lName: "Hayek", facePic: image, yeaOrNay: false)
+      let person2 = Person(fName: "Salma", lName: "Hayek", facePic: image, yeaOrNay: false, att1: "", att2: "")
       people.append(person2)
     }
     
     if let image = image3 {
-      let person3 = Person(fName: "Emily", lName: "Ratajkowski", facePic: image, yeaOrNay: false)
+      let person3 = Person(fName: "Emily", lName: "Ratajkowski", facePic: image, yeaOrNay: false, att1: "", att2: "")
       people.append(person3)
     }
     
     if let image = image4 {
-      let person4 = Person(fName: "Adna", lName: "Seta", facePic: image, yeaOrNay: false)
+      let person4 = Person(fName: "Adna", lName: "Seta", facePic: image, yeaOrNay: false, att1: "", att2: "")
       people.append(person4)
     }
   }
@@ -71,4 +71,3 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
   }
 }
-

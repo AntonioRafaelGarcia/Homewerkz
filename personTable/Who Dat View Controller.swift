@@ -1,26 +1,29 @@
 import UIKit
 
-class WhoDatViewController: UIViewController {
+class WhoDatViewController: UIViewController, UITextFieldDelegate {
   var doneSlided: Int = 50
   var personOfInterest: Person?
-  @IBOutlet weak var showEm: UILabel!
   @IBOutlet weak var showTheirPic: UIImageView!
   @IBOutlet weak var sayTheyreLookingood: UITextView!
   @IBOutlet weak var hotTrueNotFalse: UILabel!
+  @IBOutlet weak var firstAttributeTextField: UITextField!
+  @IBOutlet weak var secondAttributeTextField: UITextField!
   
   //MARK - life cycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     if let person = personOfInterest {
-      showEm.text = "\(person.firstName) \(person.lastName)"
       showTheirPic.image = person.profile
-      sayTheyreLookingood.text = "\(person.firstName)'s lookin' pretty good, amirite?"
+      sayTheyreLookingood.text = "\(person.firstName) \(person.lastName)'s lookin' pretty good, amirite?"
         if personOfInterest!.hot == true {
           hotTrueNotFalse.text = "TRUE"
         } else {
           hotTrueNotFalse.text = "FALSE"
         }
         }
+    updateFields()
+    firstAttributeTextField.delegate = self
+    secondAttributeTextField.delegate = self
     }
     
   //MARK - user methods
@@ -43,5 +46,22 @@ class WhoDatViewController: UIViewController {
       
       presentViewController(alert, animated: true, completion: nil)
     }
-  }  
+  }
+  
+  func updateFields () {
+    if let person = personOfInterest{
+      firstAttributeTextField.text = person.personalAttribute1
+      secondAttributeTextField.text = person.personalAttribute2
+    }
+  }
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    if let person = personOfInterest{
+      person.personalAttribute1 = firstAttributeTextField.text
+      person.personalAttribute2 = secondAttributeTextField.text
+    }
+    updateFields()
+    textField.resignFirstResponder()
+    return true
+  }
 }

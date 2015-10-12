@@ -5,8 +5,8 @@ class Person {
   var lastName : String = ""
   var profile : UIImage?
   var hot : Bool?
-  var personalAttribute1: String?
-  var personalAttribute2: String?
+  var personalAttribute1: String = ""
+  var personalAttribute2: String = ""
   
   init(fName: String, lName: String, facePic: UIImage, yeaOrNay: Bool, att1: String, att2: String) {
     firstName = fName

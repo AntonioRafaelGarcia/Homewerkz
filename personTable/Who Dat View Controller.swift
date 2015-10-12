@@ -4,7 +4,6 @@ class WhoDatViewController: UIViewController, UITextFieldDelegate {
   var doneSlided: Int = 50
   var personOfInterest: Person?
   @IBOutlet weak var showTheirPic: UIImageView!
-  @IBOutlet weak var sayTheyreLookingood: UITextView!
   @IBOutlet weak var hotTrueNotFalse: UILabel!
   @IBOutlet weak var firstAttributeTextField: UITextField!
   @IBOutlet weak var secondAttributeTextField: UITextField!
@@ -14,18 +13,18 @@ class WhoDatViewController: UIViewController, UITextFieldDelegate {
     super.viewDidLoad()
     if let person = personOfInterest {
       showTheirPic.image = person.profile
-      sayTheyreLookingood.text = "\(person.firstName) \(person.lastName)'s lookin' pretty good, amirite?"
-        if personOfInterest!.hot == true {
-          hotTrueNotFalse.text = "TRUE"
-        } else {
-          hotTrueNotFalse.text = "FALSE"
-        }
-        }
+      if personOfInterest!.hot == true {
+        hotTrueNotFalse.text = "TRUE"
+      } else {
+        hotTrueNotFalse.text = "FALSE"
+      }
+    }
     updateFields()
     firstAttributeTextField.delegate = self
     secondAttributeTextField.delegate = self
-    }
-    
+  }
+  
+  
   //MARK - user methods
   @IBAction func sliderMoved(slider: UISlider) {
     doneSlided = lroundf(slider.value)
@@ -57,8 +56,8 @@ class WhoDatViewController: UIViewController, UITextFieldDelegate {
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     if let person = personOfInterest{
-      person.personalAttribute1 = firstAttributeTextField.text
-      person.personalAttribute2 = secondAttributeTextField.text
+      person.personalAttribute1 = firstAttributeTextField.text!
+      person.personalAttribute2 = secondAttributeTextField.text!
     }
     updateFields()
     textField.resignFirstResponder()

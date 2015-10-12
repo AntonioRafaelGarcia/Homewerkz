@@ -38,11 +38,11 @@ class ViewController: UIViewController, UITableViewDataSource {
       people.append(person4)
     }
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
+  }
   
   //MARK - other methods
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +56,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     //part 2 - configure cell
     //cell.textLabel?.text = \(indexPath.row)"
     let personInfo = people[indexPath.row]
-    cell.textLabel?.text = personInfo.firstName + " " + personInfo.lastName
+    let traits = " - " + personInfo.personalAttribute1 + ", " + personInfo.personalAttribute2
+    if traits.characters.count > 5 {
+      cell.textLabel?.text = personInfo.firstName + " " + personInfo.lastName + traits
+    } else {
+          cell.textLabel?.text = personInfo.firstName + " " + personInfo.lastName
+    }
+
     
     
     //part 3 - return cell to table

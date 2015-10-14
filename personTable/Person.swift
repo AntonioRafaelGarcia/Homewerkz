@@ -17,7 +17,7 @@ class Person: NSObject, NSCoding {
     personalAttribute2 = att2
   }
   
-  //conforming to NSCoding protocol with init(coder) and encodeWithCoder() methods
+  //conforming to NSCoding protocol with init(coder) and encodeWithCoder() methods on all Person object properties
   required init(coder aDecoder: NSCoder){
     self.firstName = aDecoder.decodeObjectForKey("firstName") as! String
     self.lastName = aDecoder.decodeObjectForKey("lastName") as! String

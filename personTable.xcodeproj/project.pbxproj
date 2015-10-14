@@ -18,7 +18,8 @@
 		B733AEAC1BC22A0C00C26CC9 /* emilyRatajkowski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA71BC22A0C00C26CC9 /* emilyRatajkowski.jpg */; settings = {ASSET_TAGS = (); }; };
 		B733AEAD1BC22A0C00C26CC9 /* gigiHadid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA81BC22A0C00C26CC9 /* gigiHadid.jpg */; settings = {ASSET_TAGS = (); }; };
 		B733AEAE1BC22A0C00C26CC9 /* salmaHayek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B733AEA91BC22A0C00C26CC9 /* salmaHayek.jpg */; settings = {ASSET_TAGS = (); }; };
-		B7B546531BBFA4EF00EF3F86 /* Who Dat View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B546521BBFA4EF00EF3F86 /* Who Dat View Controller.swift */; settings = {ASSET_TAGS = (); }; };
+		B7B546531BBFA4EF00EF3F86 /* WhoDatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B546521BBFA4EF00EF3F86 /* WhoDatViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B7C9F2431BCB5F1F00BAD851 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C9F2421BCB5F1F00BAD851 /* PersonTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		B733AEA71BC22A0C00C26CC9 /* emilyRatajkowski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emilyRatajkowski.jpg; sourceTree = "<group>"; };
 		B733AEA81BC22A0C00C26CC9 /* gigiHadid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gigiHadid.jpg; sourceTree = "<group>"; };
 		B733AEA91BC22A0C00C26CC9 /* salmaHayek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salmaHayek.jpg; sourceTree = "<group>"; };
-		B7B546521BBFA4EF00EF3F86 /* Who Dat View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Who Dat View Controller.swift"; sourceTree = "<group>"; };
+		B7B546521BBFA4EF00EF3F86 /* WhoDatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoDatViewController.swift; sourceTree = "<group>"; };
+		B7C9F2421BCB5F1F00BAD851 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,8 @@
 				B7102EEF1BBB782A0065D109 /* ViewController.swift */,
 				B7102EFF1BBC8EDF0065D109 /* Person.swift */,
 				B7102EF11BBB782A0065D109 /* Main.storyboard */,
-				B7B546521BBFA4EF00EF3F86 /* Who Dat View Controller.swift */,
+				B7C9F2421BCB5F1F00BAD851 /* PersonTableViewCell.swift */,
+				B7B546521BBFA4EF00EF3F86 /* WhoDatViewController.swift */,
 				B702C5A41BC1C338000046FB /* Assets */,
 				B7102EF61BBB782A0065D109 /* LaunchScreen.storyboard */,
 				B7102EF91BBB782A0065D109 /* Info.plist */,
@@ -170,7 +173,8 @@
 			files = (
 				B7102F001BBC8EDF0065D109 /* Person.swift in Sources */,
 				B7102EF01BBB782A0065D109 /* ViewController.swift in Sources */,
-				B7B546531BBFA4EF00EF3F86 /* Who Dat View Controller.swift in Sources */,
+				B7B546531BBFA4EF00EF3F86 /* WhoDatViewController.swift in Sources */,
+				B7C9F2431BCB5F1F00BAD851 /* PersonTableViewCell.swift in Sources */,
 				B7102EEE1BBB782A0065D109 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

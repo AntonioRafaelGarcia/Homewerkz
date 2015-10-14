@@ -8,11 +8,12 @@ class WhoDatViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var firstAttributeTextField: UITextField!
   @IBOutlet weak var secondAttributeTextField: UITextField!
   
+  
   //MARK - life cycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     if let person = personOfInterest {
-      showTheirPic.image = person.profile
+      showTheirPic.image = person.profilePic
       if personOfInterest!.hot == true {
         hotTrueNotFalse.text = "TRUE"
       } else {
@@ -28,11 +29,6 @@ class WhoDatViewController: UIViewController, UITextFieldDelegate {
   //MARK - user methods
   @IBAction func sliderMoved(slider: UISlider) {
     doneSlided = lroundf(slider.value)
-    if hotTrueNotFalse.text == "TRUE" {
-      print("\(slider.value)/100 between hot and hot, eh?")
-    } else {
-      print("\(slider.value)/100 between hot and not, eh?")
-    }
   }
   
   @IBAction func showAlert() {

@@ -13,35 +13,40 @@ class ViewController: UIViewController, UITableViewDataSource {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
-    if let image = image0 {
-      let person0 = Person(fName: "Antonio", lName: "Garcia", facePic: image, yeaOrNay: true, att1: "", att2: "")
-      people.append(person0)
-    }
-    
-    if let image = image1 {
-      let person1 = Person(fName: "Gigi", lName: "Hadid", facePic: image, yeaOrNay: false, att1: "", att2: "")
-      people.append(person1)
-    }
-    
-    if let image = image2 {
-      let person2 = Person(fName: "Salma", lName: "Hayek", facePic: image, yeaOrNay: false, att1: "", att2: "")
-      people.append(person2)
-    }
-    
-    if let image = image3 {
-      let person3 = Person(fName: "Emily", lName: "Ratajkowski", facePic: image, yeaOrNay: false, att1: "", att2: "")
-      people.append(person3)
-    }
-    
-    if let image = image4 {
-      let person4 = Person(fName: "Adna", lName: "Seta", facePic: image, yeaOrNay: false, att1: "", att2: "")
-      people.append(person4)
+    if let whatLoaded = loadFromArchive(){
+      people = whatLoaded
+    } else {
+      if let image = image0 {
+        let person0 = Person(fName: "Antonio", lName: "Garcia", facePic: image, yeaOrNay: true, att1: "", att2: "")
+        people.append(person0)
+      }
+      
+      if let image = image1 {
+        let person1 = Person(fName: "Gigi", lName: "Hadid", facePic: image, yeaOrNay: false, att1: "", att2: "")
+        people.append(person1)
+      }
+      
+      if let image = image2 {
+        let person2 = Person(fName: "Salma", lName: "Hayek", facePic: image, yeaOrNay: false, att1: "", att2: "")
+        people.append(person2)
+      }
+      
+      if let image = image3 {
+        let person3 = Person(fName: "Emily", lName: "Ratajkowski", facePic: image, yeaOrNay: false, att1: "", att2: "")
+        people.append(person3)
+      }
+      
+      if let image = image4 {
+        let person4 = Person(fName: "Adna", lName: "Seta", facePic: image, yeaOrNay: false, att1: "", att2: "")
+        people.append(person4)
+      }
     }
   }
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     tableView.reloadData()
+    saveToArchive()
   }
   
   //MARK - other methods
@@ -51,19 +56,18 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     //part 1 - dequeue cell
-    let cell = tableView.dequeueReusableCellWithIdentifier("personCell", forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCellWithIdentifier("personCell", forIndexPath: indexPath) as! PersonTableViewCell
     
     //part 2 - configure cell
     //cell.textLabel?.text = \(indexPath.row)"
     let personInfo = people[indexPath.row]
-    let traits = " - " + personInfo.personalAttribute1 + ", " + personInfo.personalAttribute2
-    if traits.characters.count > 5 {
-      cell.textLabel?.text = personInfo.firstName + " " + personInfo.lastName + traits
+    cell.personCellNameLabel?.text = personInfo.firstName + " " + personInfo.lastName
+    if personInfo.personalAttribute1.characters.count > 1 && personInfo.personalAttribute2.characters.count > 1 {
+      cell.personCellTraitsLabel?.text = personInfo.personalAttribute1 + ", " + personInfo.personalAttribute2
     } else {
-          cell.textLabel?.text = personInfo.firstName + " " + personInfo.lastName
+      cell.personCellTraitsLabel?.text = ""
     }
-
-    
+    cell.personCellImage?.image = personInfo.profilePic
     
     //part 3 - return cell to table
     return cell
@@ -75,5 +79,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         nextViewController.personOfInterest = people[tableClick.row]
       }
     }
+  }
+  
+  func saveToArchive(){
+    //get path to documents directory
+    let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+    //archive
+    NSKeyedArchiver.archiveRootObject(self.people, toFile: documentsPath + "/archive")
+  }
+  
+  func loadFromArchive() -> [Person]? {
+    //get path to document directory in sandbox
+    let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+    //attempt to unarchive object graph
+    if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive") as? [Person]{
+      return peopleFromArchive
+    }
+    return nil
   }
 }
